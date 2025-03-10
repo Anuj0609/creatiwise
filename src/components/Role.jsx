@@ -12,7 +12,7 @@ const images = [
 
 function Role() {
   return (
-    <div className="flex flex-wrap justify-center md:justify-between items-center gap-2 md:gap-4 py-16">
+    <div className="flex justify-center md:justify-between items-center gap-2 md:gap-4 py-16">
       {images.map((image, index) => (
         <img
           key={index}
