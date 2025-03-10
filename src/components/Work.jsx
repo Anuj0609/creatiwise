@@ -26,48 +26,40 @@ const cards = [
 
 function Work() {
   return (
-    <div className="px-[100px] py-16 space-y-8">
-      {/* Section Header */}
-      <div className="flex flex-row gap-2 items-center justify-between">
+    <div className="px-4 md:px-[100px] py-16 space-y-8">
+      <div className="flex flex-col md:flex-row gap-4 md:gap-2 items-center md:items-start justify-between text-center md:text-left">
         <div className="flex flex-row gap-2 items-center">
           <img src="./Expertise.png" className="w-8 h-8" alt="Expertise" />
-          <div className="font-[Syne] font-bold text-[40px] leading-[100%] text-white">
+          <div className="font-[Syne] font-bold text-[32px] md:text-[40px] leading-[100%] text-white">
             Works
           </div>
         </div>
         <div className="border-b-2 text-white cursor-pointer">View All</div>
       </div>
 
-      {/* Work Cards */}
       <div className="flex flex-col gap-8">
         {cards.map((card, index) => (
           <div
             key={index}
-            className="flex flex-row gap-8 pt-8 bg-[rgba(203,203,203,0.48)] p-8 rounded-[40px]"
+            className="flex flex-col md:flex-row gap-8 pt-8 bg-[rgba(203,203,203,0.48)] p-6 md:p-8 rounded-[40px] items-center md:items-start"
           >
-            {/* Image */}
             <img
               src={card.image}
-              className="w-[572px] h-[429px] object-cover"
+              className="w-full md:w-[572px] h-auto object-cover rounded-lg"
               alt={card.title}
             />
 
-            {/* Card Content */}
-            <div className="flex flex-col justify-between gap-4">
+            <div className="flex flex-col justify-between gap-4 text-center md:text-left">
               <div className="space-y-4">
-                {/* Title */}
-                <h2 className="font-[Syne] font-semibold text-[40px] leading-[100%] text-white">
+                <h2 className="font-[Syne] font-semibold text-[28px] md:text-[40px] leading-[100%] text-white">
                   {card.title}
                 </h2>
 
-                {/* Description */}
-                <p className="font-[Poppins] font-normal text-[18px] leading-[100%] text-[#CBCBCB]">
+                <p className="font-[Poppins] font-normal text-[16px] md:text-[18px] leading-[100%] text-[#CBCBCB]">
                   {card.description}
                 </p>
 
-                {/* Buttons Section */}
-                {/* Row of Small Buttons */}
-                <div className="flex flex-row gap-2">
+                <div className="flex flex-wrap justify-center md:justify-start gap-2">
                   {card.buttons.map((button, idx) => (
                     <div
                       key={idx}
@@ -79,10 +71,11 @@ function Work() {
                 </div>
               </div>
 
-              {/* View Case Study Button Below */}
-              <button className="bg-white text-black font-[Syne] font-semibold text-[14px] leading-[24px] px-8 py-4 rounded-[100px] w-fit">
-                View case study
-              </button>
+              <div className="flex justify-center md:justify-start">
+                <button className="bg-white text-black font-[Syne] font-semibold text-[14px] leading-[24px] px-8 py-4 rounded-[100px] w-fit">
+                  View case study
+                </button>
+              </div>
             </div>
           </div>
         ))}
