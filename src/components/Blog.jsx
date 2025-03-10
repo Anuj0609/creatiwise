@@ -6,7 +6,7 @@ const items = [
     date: "Nov 9, 2023",
     title: "How UX works in web",
     buttons: ["Ui", "Ux"],
-    link: "https://example.com/how-ux-works", // Add a valid link
+    link: "https://example.com/how-ux-works", 
   },
   {
     image: "./Work2.png",
