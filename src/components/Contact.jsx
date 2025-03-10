@@ -7,9 +7,12 @@ function Contact() {
       <div className="font-[Syne] font-extrabold text-[40px] md:text-[64px] leading-[50px] md:leading-[80px] uppercase">
         LET’S TALK!
       </div>
-      <div className="font-[Poppins] font-normal text-[16px] md:text-[18px] leading-[100%] flex flex-row gap-1 items-center justify-center">
+      <a
+        href="mailto:rehanurraihan@gmail.com"
+        className="font-[Poppins] font-normal text-[16px] md:text-[18px] leading-[100%] flex flex-row gap-1 items-center justify-center hover:underline cursor-pointer"
+      >
         rehanurraihan@gmail.com <MdOutlineNorthEast />
-      </div>
+      </a>
     </div>
   );
 }

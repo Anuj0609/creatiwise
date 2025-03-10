@@ -6,18 +6,21 @@ const items = [
     date: "Nov 9, 2023",
     title: "How UX works in web",
     buttons: ["Ui", "Ux"],
+    link: "https://example.com/how-ux-works", // Add a valid link
   },
   {
     image: "./Work2.png",
     date: "Aug 18, 2023",
     title: "Case study - Analysis Application.",
     buttons: ["Design", "Print"],
+    link: "https://example.com/case-study-analysis",
   },
   {
     image: "./Work3.png",
     date: "Feb 16, 2023",
     title: "3 ways to develop your skill",
     buttons: ["Figma", "Web"],
+    link: "https://example.com/develop-your-skill",
   },
 ];
 
@@ -71,9 +74,14 @@ function Blog() {
               </div>
 
               <div className="mt-4 md:mt-0 flex justify-center">
-                <button className="text-[#010208] bg-white font-[Syne] font-semibold text-[14px] leading-[24px] tracking-[0%] h-fit px-8 py-4 rounded-[100px]">
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#010208] bg-white font-[Syne] font-semibold text-[14px] leading-[24px] tracking-[0%] h-fit px-8 py-4 rounded-[100px] transition hover:bg-gray-300"
+                >
                   Read
-                </button>
+                </a>
               </div>
             </div>
           </div>

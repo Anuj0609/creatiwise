@@ -7,6 +7,7 @@ const cards = [
     description:
       "With a user-centered approach, the goal was to create an intuitive interface for enhanced financial intelligence.",
     buttons: ["figma", "ux"],
+    link: "https://example.com/analysis-case-study", 
   },
   {
     image: "./Work2.png",
@@ -14,6 +15,7 @@ const cards = [
     description:
       "With a user-centered approach, the goal was to create an intuitive interface for enhanced financial intelligence.",
     buttons: ["mobile", "web"],
+    link: "https://example.com/fortknox-case-study",
   },
   {
     image: "./Work3.png",
@@ -21,6 +23,7 @@ const cards = [
     description:
       "With a user-centered approach, the goal was to create an intuitive interface for enhanced financial intelligence.",
     buttons: ["app", "web"],
+    link: "https://example.com/zenocide-case-study",
   },
 ];
 
@@ -72,9 +75,14 @@ function Work() {
               </div>
 
               <div className="flex justify-center md:justify-start">
-                <button className="bg-white text-black font-[Syne] font-semibold text-[14px] leading-[24px] px-8 py-4 rounded-[100px] w-fit">
+                <a
+                  href={card.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white text-black font-[Syne] font-semibold text-[14px] leading-[24px] px-8 py-4 rounded-[100px] w-fit transition hover:bg-gray-300"
+                >
                   View case study
-                </button>
+                </a>
               </div>
             </div>
           </div>
